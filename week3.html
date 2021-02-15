@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timothy Negron</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="md.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+  </head>
+  <body>
+    <!-- App Container Starts -->
+    <div id="app-container">
+      <!-- Header Container Starts -->
+      <div id="header-container">
+        <div id="header-container-content">
+          <div>
+            <a id="header-my-name" href="index.html">Timothy Negron</a>
+          </div>
+
+          <div id="header-menu"></div>
+        </div>
+      </div>
+      <!-- Header Container Ends -->
+
+      <!-- App Container Content Start -->
+      <div id="app-container-content">
+        <!-- Middle Container Start -->
+        <div id="middle-container">
+          <!-- Middle Container Sidebar -->
+          <div id="middle-container-sidebar">
+            <div id="middle-container-sidebar-content">
+              <a href="ci.html">go back</a>
+            </div>
+          </div>
+          <!-- Middle Container Sidebar End-->
+
+          <!-- Middle Container Main Start -->
+          <div id="middle-container-main">
+            <div id="middle-container-main-content">
+              <body style="background-color: #f6f5f5">
+                <script>
+                  mermaid.initialize({
+                    startOnLoad: true,
+                    theme:
+                      document.body.classList.contains("vscode-dark") ||
+                      document.body.classList.contains("vscode-high-contrast")
+                        ? "dark"
+                        : "default",
+                  });
+                </script>
+
+                <div id="main-container">
+                  <div id="content-container">
+                    <h1 id="what-i-learned-in-week-3-at-code-immersives">
+                      What I Learned in Week 3 at Code Immersives
+                    </h1>
+                    <h2 id="about">About</h2>
+                    <p>
+                      I try to simply explain the concepts I
+                      learned in week 3 at Code Immersives.
+                    </p>
+                    <hr />
+                    <h2 id="topics-covered">Topics Covered</h2>
+                    <ol>
+                      <li>Introduction to Git &amp; GitHub</li>
+                      <li>Steps for Creating a New Repository</li>
+                      <li>Introduction to JavaScript</li>
+                      <li>Linking JavaScript to a HTML file</li>
+                      <li>Creating Variables in JavaScript</li>
+                      <li>Math in JavaScript</li>
+                      <li>Concatenating in JavaScript</li>
+                      <li>Introduction to Jest</li>
+                    </ol>
+                    <hr />
+                    <h2 id="introduction-to-git--github">
+                      Introduction to Git &amp; GitHub
+                    </h2>
+                    <p>
+                      Version control systems, VCS, are used to help keep track
+                      of changes that are made to a project over a period of
+                      time. It is used by groups of people working on
+                      spreadsheets, word documents, photo editors, computer
+                      code, and more.
+                    </p>
+                    <p>
+                      <em>GIT</em> is one of many version control systems that
+                      is used in software development. With GIT, computer
+                      programmers can send a version of their code to Git
+                      servers. Once their code is on a Git server, with Git and
+                      GitHub other computer programmers can get a copy of that
+                      code. The action of sending code to the cloud is called
+                      <strong>push</strong> and the action of downloading a
+                      version of code from a server to a personal computer is
+                      called <strong>clone</strong>. <em>GitHub</em> is a web
+                      application that computer programmers use
+                      <em>to manage versions of their code on Git servers</em>.
+                    </p>
+                    <p>
+                      Almost all computer programmers use a local computers
+                      command line interface to perform Git actions. This is
+                      because of how quick and easy it is to do compared when
+                      using a graphical user interface. To start a repository
+                      within a local machine, they must first perform the
+                      <strong>git init</strong> command within the directory
+                      they choose to work on within a computer. In example, on a
+                      terminal:
+                    </p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-meta">a-directory-name$</span><span class="bash"> git init</span>
+                    
+Initialized empty Git repository in /Users/Documents/new-directory/.git/
+                    </div></code></pre>
+                    <p>
+                      With the git init command, a folder named .git will be
+                      created in the computers storage. This is the local
+                      repository. In software development, a
+                      <strong>repository</strong> is a storage location for
+                      storing files with computer code and the different
+                      versions of that code.
+                    </p>
+                    <p>
+                      It is important for computer programmers to track code
+                      changes that are made over a period of time. This is
+                      because when new features are added to the code, it is
+                      possible to come across issues that cause the code to not
+                      function properly or at all. Saving different versions of
+                      that code allows computer programmers to not only start
+                      from scratch but possibly even identify what went wrong
+                      when adding a new feature.
+                    </p>
+                    <p>
+                      When a computer programmer wants to send new changes to
+                      their code to a Git server, the remote repository, they
+                      will first have to use the
+                      <strong>git add</strong> command. For example, on a
+                      terminal:
+                    </p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-meta">a-directory-name$</span><span class="bash"> git add main.js</span>
+                    </div></code></pre>
+                    <blockquote>
+                      <p>
+                        To see if the changes were added use the
+                        <strong>git status</strong> command.
+                      </p>
+                    </blockquote>
+                    <p>
+                      This metaphorically adds the file with new changes in
+                      &quot;a box&quot;. Once, the computer programmer is done
+                      adding files with changes to &quot;the box&quot; with the
+                      git add command, they need to use the
+                      <strong>git commit</strong> command to, metaphorically,
+                      package the file and &quot;label it&quot;. For example, on
+                      a terminal:
+                    </p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-meta">a-directory-name$</span><span class="bash"> git commit -m <span class="hljs-string">"Adds friends list"</span></span>
+                    </div></code></pre>
+                    <p>
+                      Where <strong>-m</strong> gives them the ability to add a
+                      message - or &quot;label&quot;.
+                    </p>
+                    <p>
+                      The &quot;git package&quot;, which is now in the .git
+                      folder that was created earlier with the git init command,
+                      is now ready to be moved to the Git server. To finally
+                      move the new changes, or send &quot;the box&quot;, to the
+                      Git server, a computer programmer must use the
+                      <strong>git push</strong> command. Simply, on a terminal:
+                    </p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-meta">a-directory-name$</span><span class="bash"> git push</span>
+                    </div></code></pre>
+                    <blockquote>
+                      <p>
+                        To see a log of all Git activity, use the
+                        <strong>git log</strong> command.
+                      </p>
+                    </blockquote>
+                    <p>
+                      The new changes have been moved to the server. Every time
+                      a computer programmer wants to add changes to a Git
+                      server, they would repeat this process.
+                    </p>
+                    <p>
+                      With the code now on the Git server, other computer
+                      programmers have the ability to get a copy of that code.
+                      They can get a copy of the code by logging onto GitHub's
+                      web application and going onto the webpage with the
+                      repository of that code, then fork it.
+                      <strong>Fork</strong> is when a copy of code is made onto
+                      a Git account from another Git account. Once the forked
+                      version is on their account, they can clone the code onto
+                      their computer with the <strong>git clone</strong> command
+                      and the repositories URL. In example, on a terminal:
+                    </p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-meta">a-directory-name$</span><span class="bash"> git <span class="hljs-built_in">clone</span> https://github.com/user/repo</span>
+                    </div></code></pre>
+                    <blockquote>
+                      <p>
+                        Also with GitHub, computer programmers can compare
+                        previous versions of their code with the current and
+                        vice versa.
+                      </p>
+                    </blockquote>
+                    <p>
+                      When the command above is entered, a copy will be made
+                      under the directory where the command was entered and the
+                      code can now be edited on that computer.
+                    </p>
+                    <p>
+                      If a computer programmer is invited to
+                      <strong>collaborate</strong> on the project, they can use
+                      the <strong>git pull</strong> command to get the latest
+                      copy of any code that has been pushed to the git servers
+                      by other programmers working on the same code. In example,
+                      on a terminal:
+                    </p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-meta">a-directory-name$</span><span class="bash"> git pull</span>
+                    </div></code></pre>
+                    <p>
+                      If a programmers pushes changes to a file that a
+                      co-programmer was working on and then that co-programmer
+                      pulls the new changes, a
+                      <strong>conflict</strong> would occur. The co-programmer
+                      that pulled the code from the git server could then choose
+                      to <strong>merge</strong> both files, decline any changes,
+                      or accept the new changes and not keep the changes they've
+                      made. To avoid conflicts, programmers must communicate and
+                      plan out stages of development.
+                    </p>
+                    <h5
+                      id="here-is-a-pictorial-representation-of-the-git-version-control-system"
+                    >
+                      Here is a pictorial representation of the Git version
+                      control system:
+                    </h5>
+                    <p>
+                      <img
+                        src="https://i.imgur.com/3pQlZ1L.png"
+                        alt="alt Git revision control system"
+                      />
+                    </p>
+                    <hr />
+                    <h2 id="steps-for-creating-a-new-repository">
+                      Steps for Creating a New Repository
+                    </h2>
+                    <p>On a terminal:</p>
+                    <ol>
+                      <li>Go to a directory you want to work from.</li>
+                      <li>Enter the <code>git init command</code>.</li>
+                      <li>
+                        Create any files you want.
+                        <em>Good time to create a <code>README.md</code></em>
+                      </li>
+                      <li>
+                        Enter the <code>git add command</code> and add the
+                        files.
+                      </li>
+                      <li>
+                        Enter the
+                        <code>git commit -m &quot;a message&quot;</code> command
+                        and enter a good message.
+                      </li>
+                    </ol>
+                    <p>Next, on a web browser:</p>
+                    <ol>
+                      <li>Log into your GitHub account.</li>
+                      <li>Create a new repository.</li>
+                    </ol>
+                    <p>Finally, on a terminal within the same directory:</p>
+                    <ol>
+                      <li>Enter <code>git branch -M main</code></li>
+                      <li>
+                        Enter
+                        <code
+                          >git remote add origin
+                          https://github.com/username/new_repo_name</code
+                        >
+                      </li>
+                      <li>Enter <code>git push -u origin main</code></li>
+                    </ol>
+                    <hr />
+                    <h2 id="introduction-to-javascript">
+                      Introduction to JavaScript
+                    </h2>
+                    <p>
+                      JavaScript is a programming language that was originally
+                      designed to build interactive web pages. Later, it was
+                      made possible to run outside of a web browser with a
+                      technology called Node. Node gave developers the ability
+                      to program mobile applications, command-line tools, and
+                      more with JavaScript. Today, JavaScript is one of the
+                      most, if not the most, popular programming language.
+                    </p>
+                    <hr />
+                    <h2 id="linking-javascript-to-a-html-file">
+                      Linking JavaScript to a HTML file
+                    </h2>
+                    <p>
+                      To link a JavaScript, .js, file to a HTML file, .html, the
+                      following line of code needs to be within the
+                      <code>&lt;body&gt;</code> tag or the
+                      <code>&lt;header&gt;</code> tag of the .html file:
+                    </p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"script.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+                    </div></code></pre>
+                    <p>
+                      In the quotes would be the name of the JavaScript file
+                      with the .js extension. In this case the name of the .js
+                      file is script.
+                    </p>
+                    <hr />
+                    <h2 id="javascript-variable-types">
+                      JavaScript Variable Types
+                    </h2>
+                    <p>
+                      With JavaScript, variable names can be created and each
+                      variable can be set with a value. The value can be of many
+                      different types. Here is a list of JavaScript variable
+                      types:
+                    </p>
+                    <ul>
+                      <li>
+                        <strong>String:</strong> an array of characters and
+                        symbols in quotations.
+                      </li>
+                      <li>
+                        <strong>Number:</strong> integer, decimals, negative
+                        numbers.
+                      </li>
+                      <li>
+                        <strong>Boolean:</strong> either a true or false value.
+                      </li>
+                      <li><strong>NaN:</strong> not a number.</li>
+                      <li><strong>Null:</strong> a value does not exist.</li>
+                      <li>
+                        <strong>Undefined:</strong> a variable that has not been
+                        set with a value.
+                      </li>
+                    </ul>
+                    <hr />
+                    <h2 id="creating-variables-in-javascript">
+                      Creating Variables in JavaScript
+                    </h2>
+                    <p>
+                      Creating variables in JavaScript is more straight forward
+                      than other computer programming languages. To create a
+                      variable in JavaScript, you must use the
+                      <code>let</code> keyword before the name of the variable.
+                      The variable name cannot contain spaces. In example:
+                    </p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-keyword">let</span> myFirstVariable = <span class="hljs-number">1</span>;
+                    </div></code></pre>
+                    <p>
+                      The line of JavaScript code above creates a variable with
+                      a type of number. Where the <code>let</code> keyword tells
+                      the computer to create a variable,
+                      <code>myFirstVariable</code> is the variable name, and
+                      <code>= 1</code> sets the value of the variable
+                      <code>myFirstVariable</code> to one
+                      <em
+                        >and tells the computer that the variable has a type of
+                        number</em
+                      >.
+                    </p>
+                    <p>
+                      Here is an example of creating a string variable type:
+                    </p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-keyword">let</span> myFirstString = <span class="hljs-string">'Hello World'</span>;
+                    </div></code></pre>
+                    <p>
+                      The single quotes before and after the text,
+                      <em
+                        >tells the computer that the variable has a type of
+                        String</em
+                      >.
+                    </p>
+                    <p>Here is an example of creating a boolean variable:</p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-keyword">let</span> myFirstBoolean = <span class="hljs-literal">true</span>;
+                    </div></code></pre>
+                    <p>
+                      True and false, without quotations, is a value and keyword
+                      in JavaScript that
+                      <em
+                        >tells the computer that the type of the variable is
+                        boolean</em
+                      >.
+                    </p>
+                    <hr />
+                    <h2 id="math-in-javascript">Math in JavaScript</h2>
+                    <p>
+                      Math in JavaScript can be done with the following symbols
+                      as the basic math operators:
+                    </p>
+                    <ul>
+                      <li>Addition operator: +</li>
+                      <li>Subtraction operator: -</li>
+                      <li>Multiplication operator: *</li>
+                      <li>Division operator: /</li>
+                    </ul>
+                    <p>Here is an example in code:</p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-keyword">let</span> sum = <span class="hljs-number">4</span> * <span class="hljs-number">4</span>;
+
+<span class="hljs-built_in">console</span>.log(sum);
+                    </div></code></pre>
+                    <p>Output:</p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-number">16</span>
+                    </div></code></pre>
+                    <hr />
+                    <h2 id="concatenating-in-javascript">
+                      Concatenating in JavaScript
+                    </h2>
+                    <p>
+                      In JavaScript you can link, or concatenate, two String
+                      variables with the addition symbol. For example:
+                    </p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-keyword">let</span> myFirstName = <span class="hljs-string">'Timothy'</span>;
+<span class="hljs-keyword">let</span> myLastName = <span class="hljs-string">'Negron'</span>;
+                    
+<span class="hljs-keyword">let</span> myFullName = myFirstName + <span class="hljs-string">' '</span> + myLastName;
+                    
+<span class="hljs-built_in">console</span>.log(myFirstName);
+                    </div></code></pre>
+                    <p>Output:</p>
+                    <pre class="hljs"><code><div>Timothy Negron
+                    </div></code></pre>
+                    <p>
+                      Where the value of <code>myFirstName</code>, the space in
+                      between the single quotes, and the value of
+                      <code>myLastName</code> is assigned to
+                      <code>myFullName</code>. The result is a
+                      <strong>concatenation</strong> of all three values.
+                    </p>
+                    <hr />
+                    <h2 id="introduction-to-jest">Introduction to Jest</h2>
+                    <p>
+                      <em>Jest</em> is a JavaScript unit testing tool that gives
+                      computer programmers instant feedback on the test they
+                      create for their code. <strong>Unit Testing</strong> is
+                      important in software development for ensuring that all
+                      components of a program is working properly. On a
+                      terminal, to start the Jest program, enter:
+                    </p>
+                    <pre
+                      class="hljs"
+                    ><code><div><span class="hljs-meta">a-director$</span><span class="bash"> jest --watch-all</span>
+                    </div></code></pre>
+                    <blockquote>
+                      <p>
+                        To install Jest, on a terminal enter: npm install
+                        --global jest
+                      </p>
+                    </blockquote>
+                    <hr />
+                    <h2 id="summary">Summary</h2>
+                    <p>
+                      To summarize, Git is a powerful version control system
+                      that helps software developers maintain a history of
+                      revisions that they make to their code. GitHub is a
+                      website that helps manage Git repositories. JavaScript is
+                      a computer programming language that was originally design
+                      to create interactive web applications and is now also
+                      used to create interactive mobile and desktop
+                      applications. Finally, Jest is a JavaScript unit testing
+                      tool that helps build stable computer applications.
+                    </p>
+                  </div>
+                </div>
+              </body>
+            </div>
+          </div>
+          <!-- Middle Container Main End-->
+
+          <!-- Middle Container Sidebar Right -->
+          <!-- <div id="middle-container-sidebar-right">
+                <div id="middle-container-sidebar-right-content">
+                    <a><strong>Term 1</strong></a>
+                    <a href="week3.html">week 3</a>
+                    <a href="week2.html">week 2</a>
+                    <a href="week1.html">week 1</a>
+                </div>
+            </div> -->
+          <!-- Middle Container Sidebar Right End-->
+        </div>
+        <!-- Middle Container End-->
+      </div>
+      <!-- App Container Content Ends -->
+    </div>
+    <!-- App Container Ends -->
+  </body>
+</html>
