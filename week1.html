@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timothy Negron</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="md.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+  </head>
+  <body>
+    <!-- App Container Starts -->
+    <div id="app-container">
+      <!-- Header Container Starts -->
+      <div id="header-container">
+        <div id="header-container-content">
+          <div>
+            <a id="header-my-name" href="index.html">Timothy Negron</a>
+          </div>
+
+          <div id="header-menu"></div>
+        </div>
+      </div>
+      <!-- Header Container Ends -->
+
+      <!-- App Container Content Start -->
+      <div id="app-container-content">
+        <!-- Middle Container Start -->
+        <div id="middle-container">
+          <!-- Middle Container Sidebar -->
+          <div id="middle-container-sidebar">
+            <div id="middle-container-sidebar-content">
+              <a href="ci.html">go back</a>
+            </div>
+          </div>
+          <!-- Middle Container Sidebar End-->
+
+          <!-- Middle Container Main Start -->
+          <div id="middle-container-main">
+            <div id="middle-container-main-content">
+                <script>
+                  mermaid.initialize({
+                    startOnLoad: true,
+                    theme:
+                      document.body.classList.contains("vscode-dark") ||
+                      document.body.classList.contains("vscode-high-contrast")
+                        ? "dark"
+                        : "default",
+                  });
+                </script>
+                <h1 id="what-i-learned-in-week-1-at-code-immersives">
+                  What I learned in Week 1 at Code Immersives
+                </h1>
+                <h2 id="about">About</h2>
+                <p>
+                  I try to simply explain the concepts I learned in week 1 at
+                  Code Immersives.
+                </p>
+                <hr />
+                <h2 id="topics-covered">Topics Covered</h2>
+                <ol>
+                  <li>Markup Languages</li>
+                  <li>Markdown</li>
+                  <li>Introduction to HTML</li>
+                  <li>Introduction to CSS</li>
+                  <li>The Box Model</li>
+                  <li>Introduction to CSS Flexbox Layout Module</li>
+                  <li>Introduction to the Command Line Interface</li>
+                </ol>
+                <hr />
+                <h2 id="markup-languages">Markup Languages</h2>
+                <p>
+                  Markup languages are used by computer programmers to arrange
+                  content within what they're creating in code. Markup languages
+                  come with a set of tags that can be used to tell a computer
+                  how the content assigned to the tag is intended to be
+                  displayed, arranged, or behave. The content and tag make up
+                  what is referred too as an <strong>element</strong>.
+                </p>
+                <p>
+                  In software development, a <strong>tag</strong> is a piece of
+                  code that tells the computer what type of content is within
+                  the tag. Tags are made with characters and or or symbols which
+                  are used to tell the computer what to do with the content that
+                  is after or between it. If the syntax within the tag is
+                  erroneous, or logically incorrect, then the computer would not
+                  translate the content correctly or at all.
+                </p>
+                <hr />
+                <h2 id="markdown">Markdown</h2>
+                <p>
+                  Markdown is one of many markup languages. In Markdown, tags
+                  can contain content types such as text or a link source of a
+                  website, image, or YouTube video.
+                </p>
+                <p>
+                  In example, a header tag can be used to create a title.
+                  Emphasis tags can be used to make text in
+                  <strong>bold</strong> or <em>italics</em>. And an image tag
+                  can be used to display an image within the document. Here's
+                  how the source code for those examples would look in a
+                  Markdown file:
+                </p>
+                <pre
+                  class="hljs"
+                ><code><div><span class="hljs-section"># Title</span>
+                <span class="hljs-strong">**bold**</span>
+                <span class="hljs-emphasis">*italics*</span>
+                ![<span class="hljs-string">alt My Image</span>](<span class="hljs-link">image.png</span>)
+                </div></code></pre>
+                <blockquote>
+                  <p>Markdown files require a .md file extension.</p>
+                </blockquote>
+                <p>
+                  Markdown's source code is much easier for a human to read and
+                  write compared to other markup languages such as HTML. This is
+                  why Markdown is widely used by computer programmers to create
+                  quick documents that explain a computer program they've
+                  written. As another example, Markdown is also used to write
+                  down instructions like how to install and execute an
+                  application in discussion within GitHub.
+                </p>
+                <h4
+                  id="here-is-a-comparison-of-html-source-code-versus-markdown-source-code"
+                >
+                  <strong
+                    >Here is a comparison of HTML source code versus Markdown
+                    source code:</strong
+                  >
+                </h4>
+                <p>
+                  <img
+                    src="https://steemitimages.com/p/9vWp6aU4y8kyJM9JABQLRPjsM1uPXZuvARzQeXR3gBfvbngzeiXd5k7dtSQG9ZwyWcvXbQ886oKmBehKC5PsSjqHq8UYPLKnwFmpEwEtGw6xd9zZTfeAKJy3WvMdirKx3iUBQTX6V6FeiskRu?format=match&amp;mode=fit&amp;width=640"
+                    alt="alt Markdown Vs HTML"
+                  />
+                </p>
+                <hr />
+                <h2 id="introduction-to-html">Introduction to HTML</h2>
+                <p>
+                  HTML is another markup language that is used in software
+                  development. Like Markdown, HTML has tags to create and format
+                  elements, however, in HTML the tags can also contain
+                  attributes. In HTML, <strong>attributes</strong> give a
+                  computer more data about how an element should be presented.
+                  This gives someone programming a computer more control over
+                  the contents within the tag. An attribute is a component of an
+                  element that can be added if desired.
+                </p>
+                <h5 id="here-is-a-visual-break-down-of-an-element-in-html">
+                  <strong
+                    >Here is a visual break down of an element in HTML:</strong
+                  >
+                </h5>
+                <p>
+                  <img
+                    src="https://wikimedia.org/api/rest_v1/media/math/render/svg/37506127f0730d9b6035530f46c706af4e2319d4"
+                    alt="alt HTML Element Break Down"
+                  />
+                </p>
+                <p>
+                  In example, a header tag can use a style attribute with a
+                  color property and red as its value to change the color of the
+                  text to red. Here's the source code for that example in HTML:
+                </p>
+                <pre
+                  class="hljs"
+                ><code><div><span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"color: red;"</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+                </div></code></pre>
+                <blockquote>
+                  <p>
+                    In order to get a similar result in Markdown, you would have
+                    to use HTML.
+                  </p>
+                </blockquote>
+                <p>
+                  As you can see in the code above, not only is the syntax
+                  different compared with Markdown but HTML tags also always
+                  requires a closing tag - unlike most Markdown tags. Attributes
+                  must be referenced in the opening tag. The difference between
+                  Markdown and HTML expand dramatically when utilizing its
+                  ability to integrate CSS and Javascript.
+                </p>
+                <blockquote>
+                  <p>
+                    HTML stands for Hypertext Markup Language and has a .html
+                    file extension.
+                  </p>
+                </blockquote>
+                <hr />
+                <h2 id="introduction-to-css">Introduction to CSS</h2>
+                <p>
+                  CSS is known as a styling language - not a markup language. It
+                  is supported by a number of languages. In HTML, CSS is used by
+                  computer programmers to style HTML elements. Where HTML is
+                  designed for structuring elements, CSS is designed for styling
+                  them. They are countless ways to present your content with CSS
+                  with how your font looks, the color of your background, how
+                  your elements are arranged, and you can even add some
+                  animation to your elements.
+                </p>
+                <p>
+                  In CSS, a string of characters, and regularly with also one or
+                  two symbols, identify a selector.
+                  <strong>Selectors</strong> can contain a number of property
+                  and value pairs. Here is an example of how to define a
+                  selector when writing CSS code:
+                </p>
+                <pre
+                  class="hljs"
+                ><code><div><span class="hljs-selector-tag">name-of-selector</span> {
+                  <span class="hljs-attribute">property</span>: value;
+                  <span class="hljs-attribute">property</span>: value;
+                }
+                </div></code></pre>
+                <blockquote>
+                  <p>
+                    CSS code can be stored in a .html file but is conventionally
+                    stored in a .css file.
+                  </p>
+                </blockquote>
+                <p>
+                  A <strong>property</strong> is a characteristic that is
+                  assigned to an element and a <strong>value</strong> is the
+                  data representing the details of that characteristic.
+                </p>
+                <p>
+                  The most commonly used selectors in CSS are
+                  <em>tag selectors</em>, <em>class selectors</em>, and
+                  <em>id selectors</em>.
+                </p>
+                <p>
+                  Selectors with the same name as an HTML tag, such as
+                  <code>&lt;h1&gt;</code>, do not have to be referenced,
+                  assigned an attribute-value pair, in an opening tag. These
+                  selectors are referred to as tag selectors. For example:
+                </p>
+                <pre
+                  class="hljs"
+                ><code><div>  <span class="hljs-selector-tag">h1</span> {
+                    <span class="hljs-attribute">property</span>: value;
+                  }
+                </div></code></pre>
+                <p>Where <code>h1</code> is a known element in HTML.</p>
+                <p>
+                  Class selectors, however, must be referenced in HTML by
+                  utilizing the <strong>class attribute</strong> inside the
+                  opening tag of an element. They are used to set elements with
+                  a specific set of properties like tag selectors but class
+                  selectors are not limited to affecting only one element. For
+                  example, in CSS:
+                </p>
+                <pre
+                  class="hljs"
+                ><code><div><span class="hljs-selector-class">.class-selector-name</span> {
+                  <span class="hljs-attribute">property</span>: value;
+                  <span class="hljs-attribute">property</span>: value;
+                  <span class="hljs-attribute">property</span>: value;
+                }
+                </div></code></pre>
+                <p>And in HTML:</p>
+                <pre
+                  class="hljs"
+                ><code><div><span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"class-selector-name"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Hello<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+                
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"class-selector-name"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>World!<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+                </div></code></pre>
+                <blockquote>
+                  <p>
+                    It's also important to point out that
+                    <strong
+                      >more than one class can be used in a HTML tag</strong
+                    >.
+                  </p>
+                </blockquote>
+                <p>
+                  While tag selectors affect all elements with the same tag name
+                  and class selectors are used for groups of elements or more
+                  than one element, ID selectors are used to be set only with
+                  one element. ID selectors have to be referenced in HTML with a
+                  <strong>id attribute</strong>. Here's how that looks in CSS:
+                </p>
+                <pre
+                  class="hljs"
+                ><code><div><span class="hljs-selector-id">#id-selector-name</span> {
+                  <span class="hljs-attribute">property</span>: value;
+                  <span class="hljs-attribute">property</span>: value;
+                  <span class="hljs-attribute">property</span>: value;
+                }
+                </div></code></pre>
+                <p>And in HTML:</p>
+                <pre
+                  class="hljs"
+                ><code><div><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"id-selector-name"</span>&gt;</span>Click Here!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+                </div></code></pre>
+                <h4 id="here-is-a-picture-of-how-amazoncom-looks-without-css">
+                  <strong
+                    >Here is a picture of how Amazon.com looks without
+                    CSS:</strong
+                  >
+                </h4>
+                <p>
+                  <img
+                    src="https://i0.wp.com/css-tricks.com/wp-content/uploads/2019/04/s_601945040BCA3610D759145A4442799C97B904D9A9F8326DD30FDF0CF48A96B7_1555166166426_ScreenShot2019-04-13at7.35.27AM.png?ssl=1"
+                    alt="alt HTML without CSS"
+                  />
+                </p>
+                <hr />
+                <h2 id="the-box-model">The Box Model</h2>
+                <p>
+                  <em>The Box Model</em> is a phrase that's used in CSS which
+                  refer's to how a web browser determines a element's size and
+                  distance from other elements.
+                  <strong
+                    >Each element contains a content box enveloped by a padding
+                    box, border box, and margin box</strong
+                  >. A computer programmer can control each of these components
+                  by manipulating their property values in code. This gives them
+                  the ability to arrange content wherever they wish.
+                </p>
+                <h4 id="here-is-a-box-model-visualization">
+                  <strong>Here is a Box Model visualization:</strong>
+                </h4>
+                <p>
+                  <img
+                    src="https://miro.medium.com/max/725/1*2jZwpWH9XO_QllhEpyGqMA.png"
+                    alt="alt Box Model"
+                  />
+                </p>
+                <h4
+                  id="here-is-a-picture-that-highlights-all-boxes-on-the-google-home-page"
+                >
+                  <strong
+                    >Here is a picture that highlights all boxes on the Google
+                    home page:</strong
+                  >
+                </h4>
+                <p>
+                  <img
+                    src="https://i.imgur.com/hfl6JWg.png"
+                    alt="alt All Boxes On Google Home Page"
+                  />
+                </p>
+                <hr />
+                <h2 id="introduction-to-css-flexbox">
+                  Introduction to CSS Flexbox
+                </h2>
+                <p>
+                  <em>Flexbox</em> is a CSS Layout Module that gives computer
+                  programmers the ability to easily arrange or change the
+                  appearance of HTML elements. It also helps computer
+                  programmers create responsive websites effortlessly.
+                </p>
+                <p>
+                  <strong>Responsive websites</strong> display elements the way
+                  a computer programmer intends for it to be displayed
+                  regardless of window size, screen size, and device type. In
+                  example, with responsive web design, if a browser's window on
+                  a personal computer is expanded or reduce horizontally or
+                  vertically, the elements that are rendered will adapt to the
+                  window's new dimensions.
+                </p>
+                <p>
+                  In CSS, the Flexbox module can be added by simply writing
+                  <code>display: flex</code> within the curly braces of a
+                  selector. Then, a computer programmer can add one or two more
+                  simple lines of code to quickly place the elements where they
+                  wish. The results Flexbox has the ability to output can be
+                  accomplished without Flexbox but would require more lines of
+                  code and skill.
+                </p>
+                <h4
+                  id="here-is-an-image-of-what-flexbox-can-accomplish-with-just-three-lines-of-code"
+                >
+                  Here is an image of what Flexbox can accomplish with just
+                  three lines of code:
+                </h4>
+                <p>
+                  <img
+                    src="https://i.imgur.com/PnEVWZy.png"
+                    alt="alt Flexbox Froggy Code And Result"
+                  />
+                </p>
+                <blockquote>
+                  <p>
+                    Play Flexbox Froggy and learn how to use Flexbox:
+                    <a href="https://www.flexboxfroggy.com">Flexbox Froggy</a>
+                  </p>
+                </blockquote>
+                <p>
+                  The elements were spaced evenly with
+                  <code>justify-content: space-around;</code> and then moved to
+                  the bottom of the screen with
+                  <code>align-items: flex-end;</code>.
+                </p>
+                <hr />
+                <h2 id="introduction-to-the-command-line-interface">
+                  Introduction to the Command Line Interface
+                </h2>
+                <p>
+                  A <em>command line interface</em>, also often referred to as
+                  CLI in text, is a way of interacting with a computer like a
+                  graphical user interface, however, it is a text based
+                  interface. Like a graphical user interface, with a command
+                  line interface, the user can create, read, update and delete
+                  files and folders. They can also run applications, view a
+                  calendar, install applications from the internet, and much
+                  more.
+                </p>
+                <p>
+                  A command line interface program must be given
+                  <strong>commands</strong> as inputs, and can also receive
+                  arguments after the command, to perform task and navigate
+                  through the interface. Computer programmers should learn how
+                  to use the command line interface because of how much can be
+                  accomplish with one single line of characters and symbols.
+                </p>
+                <h4 id="heres-how-a-command-line-interface-looks">
+                  Here's how a command line interface looks:
+                </h4>
+                <p>
+                  <img
+                    src="https://i.imgur.com/DkytKYy.png"
+                    alt="alt A Picture of a Command Line Interface"
+                  />
+                </p>
+                <hr />
+                <h2 id="summary">Summary</h2>
+                <p>
+                  In summary, in software development, markup languages are used
+                  for structuring content within a screen display. HTML is used
+                  for structuring elements and CSS is used for styling elements.
+                  Markdown is a simple markup language that can be used to write
+                  clear plain text media. The box model is a way of thinking
+                  about how a browser determines the size and distance of
+                  elements. Flexbox is a CSS Module that can be used to arrange
+                  or change the appearance of HTML elements. Finally, a command
+                  line interface is another way to interact with a computer like
+                  a graphical user interface, however, it is more time efficient
+                  and as a result gives computer programmers more power.\
+                </p>
+            </div>
+          </div>
+          <!-- Middle Container Main End-->
+        </div>
+        <!-- Middle Container End-->
+      </div>
+      <!-- App Container Content Ends -->
+    </div>
+    <!-- App Container Ends -->
+  </body>
+</html>
