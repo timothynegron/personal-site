@@ -161,8 +161,9 @@ ol {
 }
 
 #contact-image {
-    width: 275px;
+    width: 350px;
     margin-left: 50px;
+    border-radius: 1%;
 }
 
 /* Class Selectors */
