@@ -147,6 +147,24 @@ ol {
     overflow-y: auto;
 }
 
+#contact-container {
+    display: flex;
+    /* justify-content: space-evenly; */
+}
+
+#contact-container-content-top {
+    
+}
+
+#contact-container-content-top {
+    
+}
+
+#contact-image {
+    width: 275px;
+    margin-left: 50px;
+}
+
 /* Class Selectors */
 
 .anchor-style-1 {
