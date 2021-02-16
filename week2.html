@@ -45,6 +45,168 @@
           <!-- Middle Container Main Start -->
           <div id="middle-container-main">
             <div id="middle-container-main-content">
+              <script>
+                mermaid.initialize({
+                  startOnLoad: true,
+                  theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+                      ? 'dark'
+                      : 'default'
+                });
+              </script>
+            <h1 id="what-i-learned-in-week-2-at-code-immersives">What I Learned in Week 2 at Code Immersives</h1>
+            <h2 id="introduction">About</h2>
+            <p>I try to simply explain the concepts I learned in week 2 at Code Immersives.</p>
+            <hr>
+            <h2 id="topics-covered">Topics Covered</h2>
+            <ol>
+            <li>Divs</li>
+            <li>CSS Flexbox with Divs</li>
+            <li>CSS Grid</li>
+            <li>Wireframes</li>
+            </ol>
+            <hr>
+            <h2 id="divs">Divs</h2>
+            <p>A <code>&lt;div&gt;</code> tag is a HTML element that is used to divide other HTML elements into sections. It is often referred to as a <strong>container</strong> and is normally used as a block element. A <strong>block element</strong> is a element that aligns the content within it in a vertical manner. In contrast, an <strong>inline element</strong> aligns the content within it in a horizontal manner. To display a div as a block element, the <code>display</code> property value must be set to <code>block</code> - which is a layout module. For example, with also an inline layout module for comparison, in CSS Code:</p>
+            <pre class="hljs"><code><div><span class="hljs-selector-id">#div-block</span> {
+  <span class="hljs-attribute">display</span>: block;
+  <span class="hljs-attribute">background-color</span>: lightblue;
+}
+            
+<span class="hljs-selector-id">#div-inline</span> {
+  <span class="hljs-attribute">display</span>: inline;
+  <span class="hljs-attribute">background-color</span>: lightgrey;
+}</div></code></pre>
+            <p>And in HTML:</p>
+            <pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"div-block"</span>&gt;</span>div-block content 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"div-block"</span>&gt;</span>div-block content 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+            
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"div-inline"</span>&gt;</span>div-inline content 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"div-inline"</span>&gt;</span>div-inline content 4<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></div></code></pre>
+            <p>The output will result as the following:</p>
+            <p><img src="https://i.imgur.com/cTIpxF0.png" alt="alt div example"></p>
+            <p>Most browsers do not need <code>display: block;</code> to be written in code in order for the div to be displayed as a block element. This is because they're conventionally used as block elements.</p>
+            <p>Not only are divs, which is short for division, used to divide other HTML elements into sections, they're often used to help arrange content with other technologies like <em>CSS Flexbox</em> and <em>CSS Grid</em>.</p>
+            <hr>
+            <h2 id="css-flexbox-with-divs">CSS Flexbox with Divs</h2>
+            <p>One way to arrange content within a <code>&lt;div&gt;</code> is with <em>flexbox</em>. As discussed in week 1, flexbox is a type of layout module. A <code>&lt;div&gt;</code> can be set with an id attribute that is an id selector that sets the property <code>display</code> with a value of <code>flex</code>. For example, in HTML:</p>
+            <pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"div-1"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Content 1<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Content 2<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>Content 3<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></div></code></pre>
+            <p>And on CSS:</p>
+            <pre class="hljs"><code><div><span class="hljs-selector-id">#div-1</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">background-color</span>: lightblue;
+}</div></code></pre>
+            <p>The output of this code will result as the following:</p>
+            <p><img src="https://i.imgur.com/eg3z610.png" alt="alt Flexbox and Divs example 1"></p>
+            <p>The Flexbox Layout module has been applied to the <code>&lt;div&gt;</code>. Also, as seen above, flexbox has formatted the content to be inline but referred to as a row in flexbox. With the flexbox module added, more flexbox properties on the id tag selector can be added. Flexbox has many property and value pairs. The property and value pairs can affect the order, position, and the appearance of the content. Here are some code examples of the effects flexbox property and value pairs can have on HTML elements:</p>
+            <pre class="hljs"><code><div><span class="hljs-selector-id">#div-1</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: center;
+            
+  <span class="hljs-attribute">background-color</span>: lightblue;
+}</div></code></pre>
+            <p><img src="https://i.imgur.com/9244nYl.png" alt="alt test "></p>
+            <p>Also:</p>
+            <pre class="hljs"><code><div><span class="hljs-selector-id">#div-1</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">align-items</span>: center;
+  <span class="hljs-attribute">flex-direction</span>: column;
+            
+  <span class="hljs-attribute">background-color</span>: lightblue;
+}</div></code></pre>
+            <p><img src="https://i.imgur.com/rkMU5uX.png" alt="alt column example"></p>
+            <p>Additionally:</p>
+            <pre class="hljs"><code><div><span class="hljs-selector-id">#div-1</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">justify-content</span>: flex-end;
+            
+  <span class="hljs-attribute">background-color</span>: lightblue;
+}</div></code></pre>
+            <p><img src="https://i.imgur.com/pxkY92v.png" alt="alt flex end example"></p>
+            <blockquote>
+            <p>Here is a really good article on all Flexbox property-value pairs: <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox Guide</a></p>
+            </blockquote>
+            <p>Flexbox gives computer programmers the ability to layout content only in one dimension at a time. That is, either in a horizontal (row) or in a vertical  (column) fashion.</p>
+            <hr>
+            <h2 id="css-grid">CSS Grid</h2>
+            <p>Another way to arrange content within a <code>&lt;div&gt;</code> is with CSS Grid Layout. Unlike Flexbox, <em>Grid</em> gives computer programmers the ability to layout content in two dimensions - both rows and columns simultaneous. If a <code>&lt;div&gt;</code> is set as a flexbox container, it would be limited to laying out content in either a row or a column. In contrast, if a <code>&lt;div&gt;</code> was set as a grid container, it would be able to layout the content in both a row and a column. To use CSS Grid, you can define a <code>&lt;div&gt;</code> as a grid container using the <code>display</code> property. For example:</p>
+            <pre class="hljs"><code><div><span class="hljs-selector-id">#div-parent</span> {
+  <span class="hljs-attribute">display</span>: grid;
+}</div></code></pre>
+            <p>And on HTML:</p>
+            <pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"div-parent"</span>&gt;</span>
+            
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></div></code></pre>
+            <p>Next, you have to define the grid's rows and columns using CSS Grid's dedicated properties:</p>
+            <pre class="hljs"><code><div><span class="hljs-selector-id">#div-parent</span> {
+  <span class="hljs-attribute">display</span>: grid;
+            
+  <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">25%</span> <span class="hljs-number">50%</span> <span class="hljs-number">25%</span>;
+  <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">25%</span> <span class="hljs-number">50%</span> <span class="hljs-number">25%</span>;
+}
+            </div></code></pre>
+            <p>In the code above, the <code>grid-template-rows</code> property creates three rows. Two rows were set to take up 25% of space of the div's height and one row was set to take up 50% of it. The <code>grid-template-columns</code> property creates three columns. Two columns will take up 25% of space of the div's width and one will take up 50% of it.</p>
+            <p>To layout content when using grid, child elements need to be created as well:</p>
+            <pre class="hljs"><code><div><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"div-parent"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"div-child-1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Row 1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"div-child-2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Row 2<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"div-child-3"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Row 3<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></div></code></pre>
+            <p>And on CSS:</p>
+            <pre class="hljs"><code><div><span class="hljs-selector-id">#div-parent</span> {
+  <span class="hljs-attribute">display</span>: grid;
+            
+  <span class="hljs-attribute">grid-template-rows</span>: <span class="hljs-number">25%</span> <span class="hljs-number">50%</span> <span class="hljs-number">25%</span>;
+  <span class="hljs-attribute">grid-template-columns</span>: <span class="hljs-number">25%</span> <span class="hljs-number">50%</span> <span class="hljs-number">25%</span>;
+}
+            
+<span class="hljs-selector-id">#div-child-1</span> {}
+            
+<span class="hljs-selector-id">#div-child-2</span> {}
+            
+<span class="hljs-selector-id">#div-child-3</span> {}
+            </div></code></pre>
+            <p>There's many CSS Grid property and value pairs that could help layout content. In example, on CSS:</p>
+            <pre class="hljs"><code><div><span class="hljs-selector-id">#div-child-1</span> {
+  <span class="hljs-attribute">grid-row</span>: <span class="hljs-number">1</span>;
+  <span class="hljs-attribute">grid-column</span>: <span class="hljs-number">1</span> / <span class="hljs-number">4</span>;
+            
+  <span class="hljs-attribute">background-color</span>: lightsalmon;
+}
+            
+<span class="hljs-selector-id">#div-child-2</span> {
+  <span class="hljs-attribute">grid-row</span>: <span class="hljs-number">2</span>;
+  <span class="hljs-attribute">grid-column</span>: <span class="hljs-number">1</span> / <span class="hljs-number">4</span>;
+            
+  <span class="hljs-attribute">background-color</span>: lightblue;
+}
+            
+<span class="hljs-selector-id">#div-child-3</span> {
+  <span class="hljs-attribute">grid-row</span>: <span class="hljs-number">3</span>;
+  <span class="hljs-attribute">grid-column</span>: <span class="hljs-number">1</span> / <span class="hljs-number">4</span>;
+            
+  <span class="hljs-attribute">background-color</span>: lightgrey;
+}
+            </div></code></pre>
+            <p>The output would result as the Following:</p>
+            <p><img src="https://i.imgur.com/iI7U4qU.png" alt="alt Grid output example 1"></p>
+            <blockquote>
+            <p>Learn how to use CSS Grid by playing Grid Garden: <a href="https://cssgridgarden.com">CSS Grid Garden</a></p>
+            </blockquote>
+            <p>Where <code>grid-row</code> tells the child element which row to reside in and grid-column tells the child element which row to reside in. An element can span to many columns and many rows at once.</p>
+            <hr>
+            <h2 id="wireframes">Wireframes</h2>
+            <p>A <strong>wireframe</strong> is low fedelity representation of an intended design for an application. When creating a graphical user interface, a computer programmers workflow, normally starts with creating a wireframe. A wireframe can be created with the many wireframe software products that are made alvailable across the internet, but can also be done with a paper and pencil. Wireframes helps programmers have an idea of how they should iterate through the process of creating the interface. Furthermore, a wireframe can help give them an idea of what mark up elements, structure, and technologies they need to use to layout the content of their application.</p>
+            <p><img src="https://balsamiq.com/assets/learn/articles/mobile-web.png" alt="alt Wireframe visual example"></p>
+            <hr>
+            <h2 id="summary">Summary</h2>
+            <p>In summary, <code>&lt;div&gt;</code> tags are used to divide content on websites. Flexbox has many property and value pairs that gives computer programmers the ability to easily layout content. CSS Grid is a layout module based on the concept of a grid. Wireframes help web designers visualize how they should layout their content and it also helps them have an idea of how they should structure HTML elements.</p>
+            
             </div>
           </div>
           <!-- Middle Container Main End-->

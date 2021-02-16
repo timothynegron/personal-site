@@ -62,7 +62,7 @@ ol {
 }
 
 #header-container-content {
-    width: 65vh;
+    width: 80vh;
     display: flex;
     justify-content: space-between;
     align-self: flex-end;
@@ -73,25 +73,25 @@ ol {
 }
 
 #header-menu {
-    width: 28vh;
+    width: 40vh;
     display: flex;
     justify-content: space-between;
 }
 
 #app-container-content {
-    width: 65vh;
+    width: 80vh;
     margin-top: 4vh;
 }
 
 #middle-container {
     display: flex;
-    width: 65vh;
+    width: 80vh;
 }
 
 #middle-container-sidebar {
     background-color: #dee3e2;
     position: fixed;
-    width: 10vh;
+    width: 12vh;
     height: 50vh;
     border-radius: 5px;
     -moz-box-shadow: 3px 3px 9px lightgrey;
@@ -129,9 +129,9 @@ ol {
 
 #middle-container-main {
     background-color: #FDFDFD;
-    min-height: 80vh;
-    width: 53vh;
-    margin-left: 12vh;
+    min-height: 75vh;
+    width: 65vh;
+    margin-left: 15vh;
     border-radius: 5px;
     -moz-box-shadow: 58px 58px 511px lightgrey;
     -webkit-box-shadow: 58px 58px 511px lightgrey;
