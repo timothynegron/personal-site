@@ -1,13 +1,14 @@
 /* Tag Selectors */
 body {
   background-color: #efefef;
-  font-size: 14pt;
+  font-size: 16pt;
 }
 
 a {
   color: black;
   text-decoration: none;
-  font-family: monospace;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 500;
 }
 
 a:hover {
@@ -15,28 +16,34 @@ a:hover {
 }
 
 p {
-  font-family: "Space mono", courier, monospace;
+  font-family: 'Mallanna', sans-serif;
+  font-weight: 400;
+  font-size: 16pt;
 }
 
 h1 {
-  font-family: monospace;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 100;
+
 }
 
 h2 {
-  font-family: monospace;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 100;
 }
 
 h3 {
-  font-family: monospace;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 100;
 }
 
 ul {
   list-style-type: none;
-  font-family: "Space mono", courier, monospace;
+  font-family: 'Mallanna', sans-serif;
 }
 
 ol {
-  font-family: "Space mono", courier, monospace;
+  font-family: 'Mallanna', sans-serif;
 }
 
 /* ID Selectors */
@@ -52,7 +59,7 @@ ol {
   position: fixed;
   margin-top: -1vh;
   width: 100%;
-  height: 3vh;
+  height: 4vh;
   display: flex;
   border-radius: 5px;
   justify-content: center;
@@ -65,34 +72,38 @@ ol {
   width: 80vh;
   display: flex;
   justify-content: space-between;
-  align-self: flex-end;
+  align-items: flex-end;
 }
 
 #header-my-name {
-  font-size: 16pt;
+  font-size: 30pt;
+  display: flex;
 }
 
 #header-menu {
-  width: 40vh;
+  width: 18vh;
+  margin-right: 5vh;
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
 }
 
 #app-container-content {
   width: 80vh;
-  margin-top: 4vh;
+  margin-top: 5vh;
 }
 
 #middle-container {
   display: flex;
+  flex-direction: column;
   width: 80vh;
 }
 
 #middle-container-sidebar {
   background-color: #dee3e2;
   position: fixed;
-  width: 12vh;
-  height: 50vh;
+  width: 80vh;
+  height: 3vh;
   border-radius: 5px;
   -moz-box-shadow: 3px 3px 9px lightgrey;
   -webkit-box-shadow: 3px 3px 9px lightgrey;
@@ -100,38 +111,60 @@ ol {
 }
 
 #middle-container-sidebar-content {
-  margin-top: 21px;
-  height: 20vh;
+  width: 30vh;
+  height: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: flex-end;
+  
 }
 
-#middle-container-sidebar-right {
-  background-color: #dee3e2;
-  position: fixed;
-  width: 10vh;
-  height: 50vh;
-  margin-left: 67vh;
+#middle-container-main-front-page {
+  background-color: #fdfdfd;
+  height: 34vh;
+  width: 80vh;
+  margin-top: 5vh;
   border-radius: 5px;
-  -moz-box-shadow: 3px 3px 9px lightgrey;
-  -webkit-box-shadow: 3px 3px 9px lightgrey;
-  box-shadow: 3px 5px 9px lightgray;
+  -moz-box-shadow: 58px 58px 511px lightgrey;
+  -webkit-box-shadow: 58px 58px 511px lightgrey;
+  box-shadow: 58px 58px 511px lightgray;
 }
 
-#middle-container-sidebar-right-content {
-  margin-top: 21px;
-  height: 10vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+#middle-container-main-front-page-content {
+  margin-left: 5vh;
+  margin-right: 5vh;
+  margin-bottom: 5vh;
+  overflow-y: auto;
+  display: block;
+  overflow-y: auto;
+}
+
+#middle-bottom-container-front-page {
+  background-color: #fdfdfd;
+  min-height: 50vh;
+  width: 80vh;
+  margin-top: 1vh;
+  border-radius: 5px;
+  -moz-box-shadow: 58px 58px 511px lightgrey;
+  -webkit-box-shadow: 58px 58px 511px lightgrey;
+  box-shadow: 58px 58px 511px lightgray;
+}
+
+#middle-bottom-container-front-page-content {
+  margin-left: 5vh;
+  margin-right: 5vh;
+  margin-bottom: 5vh;
+  overflow-y: auto;
+  display: block;
+  overflow-y: auto;
 }
 
 #middle-container-main {
   background-color: #fdfdfd;
   min-height: 75vh;
-  width: 65vh;
-  margin-left: 15vh;
+  width: 80vh;
+  margin-top: 5vh;
+  /* margin-left: 15vh; */
   border-radius: 5px;
   -moz-box-shadow: 58px 58px 511px lightgrey;
   -webkit-box-shadow: 58px 58px 511px lightgrey;
@@ -147,6 +180,14 @@ ol {
   overflow-y: auto;
 }
 
+#index-container {
+  display: flex;
+}
+
+#index-container-text {
+  margin-left: 5vh;
+}
+
 #contact-container {
   display: flex;
   /* justify-content: space-evenly; */
@@ -158,16 +199,21 @@ ol {
 #contact-container-content-top {
 }
 
+#contact-container-content-text {
+  margin-left: 5vh;
+}
+
 #contact-image {
-  width: 250px;
-  margin-left: 50px;
+  width: 200px;
+  height: 200px;
+  /* margin-left: 50px; */
   border-radius: 1%;
 }
 
 /* Class Selectors */
 
 .anchor-style-1 {
-  font-family: "Space mono", courier, monospace;
+  font-family: 'IBM Plex Mono', monospace;
   color: #01c5c4;
 }
 
